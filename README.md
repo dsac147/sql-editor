@@ -102,4 +102,4 @@ Plaease Create a new feature-branch each time.
 
 ### Screenshots
 
-<img src="screenshots/screenshot1.png1" alt="screenshot">
+<img src="screenshots/screenshot1.png" alt="screenshot">
