@@ -48,7 +48,7 @@ export default function SendResultModal({ sendModalVisibility, setSendModalVisib
 
     return (
       <Modal
-        title="Preview"
+        title="Share Query Results"
         centered
         visible={sendModalVisibility}
         onOk={onOk}
