@@ -2,14 +2,14 @@
  * Execute Query Page
  *
  */
-import React, { useState } from "react";
-import { Row, Col, Button } from "antd";
+import React, { useState, lazy, Suspense } from "react";
+import { Row, Col, Button, Spin } from "antd";
 import { UpCircleOutlined, DownCircleOutlined } from "@ant-design/icons";
-import CodeEditor from './CodeEditor'
 import Documentation from './Summary'
 import BottomPanel from "./BottomPanel";
 import "./runQueryPage.css"
 
+const CodeEditor = lazy(() => import("./CodeEditor"));
 
 export default function RunQueryPage() {
   /*
@@ -64,7 +64,15 @@ export default function RunQueryPage() {
         }}
       >
         <Col span={colLayout.colOneSpan}>
-          <CodeEditor />
+          <Suspense
+            fallback={
+              <div className="spinner__Container">
+                <Spin />
+              </div>
+            }
+          >
+            <CodeEditor />
+          </Suspense>
         </Col>
         <Col span={colLayout.colTwoSpan}>
           <Documentation />

@@ -1,3 +1,11 @@
+.spinner__Container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .dashboard__container{
     width: 97.5%;
     height: 88%;

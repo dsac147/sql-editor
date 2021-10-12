@@ -2,13 +2,14 @@
  * Entry point of the App
  *
  */
-import React, { useState } from "react";
+import React, { useState, lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { Layout } from "antd";
+import { Layout ,Spin} from "antd";
 import Navbar from './Components/Navbar'
 import Leftbar from './Components/LeftBar'
-import Dashboard from "./Components/Dashboard";
 import "./App.less";
+
+const Dashboard = lazy(() => import("./Components/Dashboard"));
 
 export default function App() {
   const [islayoutLeftAligned, setIslayoutLeftAligned] = useState(true);
@@ -25,7 +26,15 @@ export default function App() {
           setIslayoutLeftAligned={setIslayoutLeftAligned}
           islayoutLeftAligned={islayoutLeftAligned}
         />
-        <Dashboard />
+        <Suspense
+          fallback={
+            <div className="spinner__Container">
+              <Spin />
+            </div>
+          }
+        >
+          <Dashboard />
+        </Suspense>
       </Layout>
     </Layout>
   );
@@ -37,7 +46,15 @@ export default function App() {
           setIslayoutLeftAligned={setIslayoutLeftAligned}
           islayoutLeftAligned={islayoutLeftAligned}
         />
-        <Dashboard />
+        <Suspense
+          fallback={
+            <div className="spinner__Container">
+              <Spin />
+            </div>
+          }
+        >
+          <Dashboard />
+        </Suspense>
       </Layout>
       <Leftbar />
     </Layout>
