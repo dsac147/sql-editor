@@ -64,7 +64,7 @@ export default function BottomPanel({ isRowCollapsed }) {
         >
           <Menu.Item
             key="RESULT"
-            style={{ borderRight: "0.05rem solid grey" }}
+            style={{ borderRight: "0.05rem solid grey", paddingRight: "2rem" }}
             icon={
               <FileSearchOutlined
                 className="bottomPanel__container-icon"

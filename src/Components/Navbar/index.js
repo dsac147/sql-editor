@@ -100,12 +100,11 @@ export default function Navbar({islayoutLeftAligned, setIslayoutLeftAligned }) {
         >
           <Menu.Item
             key="LEFT"
-            style={{ borderRight: "0.05rem solid grey" }}
-                      icon={<InsertRowLeftOutlined className="navbar__container-icon" style={{fontSize:'1.25rem'}}/>}
+            style={{ borderRight: "0.05rem solid grey" , paddingRight:'2rem'}}
+            icon={<InsertRowLeftOutlined className="navbar__container-icon" style={{fontSize:'1.25rem'}}/>}
           ></Menu.Item>
           <Menu.Item
             key="RIGHT"
-            className="navbar__container-layout"
             icon={<InsertRowRightOutlined className="navbar__container-icon" style={{fontSize:'1.25rem'}}/>}
           ></Menu.Item>
         </Menu>
