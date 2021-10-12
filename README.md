@@ -103,3 +103,14 @@ Plaease Create a new feature-branch each time.
 ### Screenshots
 
 <img src="screenshots/screenshot1.png" alt="screenshot">
+<br />
+<img src="screenshots/screenshot2.png" alt="screenshot">
+<br />
+<img src="screenshots/screenshot3.png" alt="screenshot">
+<br />
+<img src="screenshots/screenshot4.png" alt="screenshot">
+<br />
+<img src="screenshots/screenshot5.png" alt="screenshot">
+<br />
+<img src="screenshots/performance.png" alt="screenshot">
+<br />
