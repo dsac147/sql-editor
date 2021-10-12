@@ -72,7 +72,7 @@ export default function SendResultModal({ sendModalVisibility, setSendModalVisib
                 }}
                 loading={loadingVisibility}
               >
-                Send for Approval
+                Send Results
               </Button>
             </span>
           </div>
