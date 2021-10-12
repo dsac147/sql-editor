@@ -3,18 +3,20 @@
  *
  */
 import React, { useState } from "react";
-import { Typography, Divider, Button, Badge , message } from "antd";
+import { Typography, Divider, Button, Badge } from "antd";
 import {
   QuestionCircleOutlined,
   CheckCircleOutlined,
   LoadingOutlined,
   SyncOutlined,
 } from "@ant-design/icons";
+import SendResultModal from "./SendResultModal";
 import "./summary.css";
 
 const { Title } = Typography;
 
 export default function Summary() {
+  const [sendModalVisibility, setSendModalVisibility] = useState(false);
   /*
    * Status Messages
    *
@@ -52,7 +54,6 @@ export default function Summary() {
    */
 
   const [loading, setLoading] = useState(false);
-  const [sendLoading, setSendLoading] = useState(false);
   const [statusMessage, setStatusMessage] = useState(completeStatus);
   const [validationMessage, setValidationMessage] = useState(validatedMessage);
 
@@ -75,26 +76,6 @@ export default function Summary() {
    *
    */
 
-  /*
-   * Handle Send Query
-   *
-   */
-  const handleSend = () => {
-    setSendLoading(true);
-    setTimeout(() => {
-      setSendLoading(false);
-      message.success({
-        content: `Successfully sent query to your team!`,
-        style: {
-          marginTop: "85vh",
-        },
-      });
-    }, 1500);
-  };
-  /*
-   *
-   *
-   */
 
   return (
     <div className="summary__container">
@@ -138,13 +119,16 @@ export default function Summary() {
           <div>
             <Button
               type="primary"
-              loading={sendLoading}
               disabled={loading}
-              onClick={handleSend}
+              onClick={() => setSendModalVisibility(true)}
             >
               Send Results
             </Button>
           </div>
+          <SendResultModal
+            sendModalVisibility={sendModalVisibility}
+            setSendModalVisibility={setSendModalVisibility}
+          />
         </div>
       </div>
     </div>
