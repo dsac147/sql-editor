@@ -83,6 +83,7 @@ export default function RunQueryPage() {
         style={{
           height: "2%",
         }}
+        className="dashboard__container-middle"
       >
         <Button
           icon={collapseIcon}

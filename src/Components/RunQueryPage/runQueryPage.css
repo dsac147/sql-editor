@@ -17,6 +17,10 @@
     border-bottom: 0.025rem solid #e6e6e6;
 }
 
+.dashboard__container-middle{
+    position: relative;
+}
+
 .dashboard__container-collapse{
     position: absolute;
     top: -1.2rem;
