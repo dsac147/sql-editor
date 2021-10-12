@@ -1,4 +1,4 @@
-name: 📦 Test and Deploy
+name: 📦 Build and Deploy
 on:
   push:
     branches:
@@ -15,8 +15,7 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install and Test
+      - name: Install
         run: |
           yarn
-          yarn test
           yarn build
