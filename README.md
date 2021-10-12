@@ -36,16 +36,16 @@
 | -------- | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- | 
 | FrontEnd | <p align="center"><img src="https://github.com/anuraghazra/BugVilla/raw/master/assets/reactjs_logo.png" width="100" height="100"> <br />Reactjs</p> | <p align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/600px-JavaScript-logo.png" width="100" height="100"> <br />Javascript</p>  | <p align="center"><img src="https://t.alipayobjects.com/images/rmsweb/T11aVgXc4eXXXXXXXX.svg" width="100" height="100"> <br />Ant Design</p>  | <p align="center"><img src="https://codemirror.net/doc/logo.png" width="100" height="100"> <br />CodeMirror</p>  
 
-## Load Time
-Google Chrome LightHouse in Private window : 5.1 s
+## Initial Load Time
+Google PageSpeed Insights : First Contentful Paint : 3.4 s
 <br>
-First Contentful Paint : 1.1 s
+Google PageSpeed Insights : Time to Interactive : 3.6 s
 
 ## Steps Taken to Reduce Load Time
 - Reduced Image Size
 - Removed unused boilerplate code 
 - Lazy Loading React
-- Can Use CSS Minifiers like PurgeCSS (Not Implemented)
+- Can Use CSS Minifiers like PurgeCSS and Terser Plugin to minify Javascript (Not Implemented)
 
 ## Quick start
 
