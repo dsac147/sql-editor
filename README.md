@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://online-sql-editor.netlify.app">
-    <img src="https://atlan.com/assets/img/atlan-blue.6ed81a56.svg" alt="Atlan Sql Editor App Logo" width="300" height="140">
+   
   </a>
 
   <h3 align="center">Run SQL Queries & share Results in a jiffy!</h3>
